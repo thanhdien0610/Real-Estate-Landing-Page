@@ -8,6 +8,11 @@
 
 html {
     font-size: 62.5%;
+   
+}
+
+html, body{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -51,17 +56,28 @@ a{
     justify-content: space-between;
 }
 /* Header */
-.header{
-    position: relative;
+.fixed-header{
     background: #E6F0FF;
-    height: 100vh;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+.hero-wrap{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #E6F0FF;
+    height: calc(100vh - 90px);
     /* //width: 100vh; */
 }
 
 .navbar{
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    /* padding-top: 38px; */
+    padding: 12px 0;
 }
 
 .navbar ul{
@@ -98,7 +114,7 @@ padding: 8px 14px;
 
 /* hero */
 .hero {
-    margin-top: 130px;
+    /* margin-top: 130px; */
     display: flex;
 }
 
@@ -171,10 +187,23 @@ padding: 8px 14px;
     margin-top: 23px;
 }
 .clients .images{
-    margin-top: 96px;
+    margin-top: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.clients .images a{
+    display: flex;
+    align-items: center;
+    padding: 0 42px;
+    height: 90px;
+    border-radius: 12px;
+    /* background-color: orange; */
+
+}
+.clients .images a:hover{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Guides */
